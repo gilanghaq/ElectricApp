@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addNewActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddNewActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="Nama Pelanggan"
+            android:textColor="@color/neutral_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fillName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nama Pelanggan"
+            android:inputType="text"
+            android:textColorHint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="Foto Meteran"
+            android:textColor="@color/neutral_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fillName" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoto">
+
+            <ImageView
+                android:id="@+id/addImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_addimg" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="Alamat"
+            android:textColor="@color/neutral_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardImage" />
+
+        <EditText
+            android:id="@+id/fillAddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:textColorHint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="Tanggal Perhitungan"
+            android:textColor="@color/neutral_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fillAddress" />
+
+        <EditText
+            android:id="@+id/fillDate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Tanggal Perhitungan"
+            android:inputType="date"
+            android:textColorHint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <TextView
+            android:id="@+id/tvPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="Jumlah Daya"
+            android:textColor="@color/neutral_900"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fillDate" />
+
+        <EditText
+            android:id="@+id/fillPower"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Jumlah Daya"
+            android:inputType="number"
+            android:textColorHint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPower" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearFill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fillPower">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvFirstMeter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/satoshi_regular"
+                    android:text="Meteran Awal"
+                    android:textColor="@color/neutral_900"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/fillFirstMater"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:hint="Meteran Awal"
+                    android:inputType="number"
+                    android:textColorHint="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvLastMeter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/satoshi_regular"
+                    android:text="Meteran Akhir"
+                    android:textColor="@color/neutral_900"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/fillLastMeter"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:hint="Meteran Akhir"
+                    android:inputType="number"
+                    android:textColorHint="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/custom_fill_button"
+            android:backgroundTint="@color/navy_200"
+            android:fontFamily="@font/satoshi_bold"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearFill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

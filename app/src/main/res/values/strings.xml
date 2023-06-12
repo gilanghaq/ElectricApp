@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ElectricApp</string>
+    <string name="tvTitle">Selamat datang\nkembali!</string>
+    <string name="term_service"><u>syarat dan ketentuan yang berlaku</u></string>
+</resources>
